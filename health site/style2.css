@@ -1,0 +1,111 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Oswald', sans-serif;
+}
+.background{
+    width: 100%;
+    height: 301vh;
+    background-image: linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.3)),url(images2/background.png);
+    background-position: center;
+    background-size: cover;
+}
+.navbar{
+    width: 85%;
+    padding: 35px 0;
+    margin: auto;
+    display: flex;
+    align-items: left;
+    justify-content: space-between;
+
+}
+.logo{
+    width: 160px;
+    cursor: pointer;
+}
+.navbar ul li {
+    list-style: none;
+    padding: 40px;
+    margin: 0 20px;
+    display: inline-block;
+    
+}
+.navbar ul li a{
+    font-size: 27px;
+    text-decoration: none;
+    color: rgb(35, 32, 44);
+    text-transform: uppercase;
+    display: inline-block;
+    position: relative;
+    padding-top: 35px;
+}
+.navbar ul li a::after{
+    content:'';
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+    left: 0;
+    height: 4px;
+    transform: scaleX(0);
+    background-color: rgb(255, 209, 166);
+    background-origin: bottom ;
+    transition: 0.25s ease-out;
+
+}
+.navbar ul li a:hover:after{
+    transform: scaleX(1);
+    transform-origin: bottom ;
+
+}
+.depression,.anxiety,.psychotic{
+    text-align: left;
+    margin: 25px;
+    padding: auto;
+    color: #fff;
+    font-size: 30px;
+    padding-left:120px;
+}
+.sym,.sym2,.sym3{
+    margin: 20px;
+    padding: 50px;
+    font-size: 25px;
+}
+.button,.button2,.button3,.button4{
+
+        border: none;
+        color: black;
+        padding: 15px 32px;
+        background-color: antiquewhite;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 16px;
+        margin: 4px 2px;
+        cursor: pointer;
+        border-radius: 25px;
+        position: relative;
+        left: 100px;
+        
+}
+.button4{
+    top: 27px;
+    font-size: 19px;
+}
+.button a,.button2 a,.button3 a,.button4 a{
+    text-decoration: none;
+    color: black;
+}
+.underline,h5{
+    text-decoration:underline;
+    text-decoration-color: rgb(255, 209, 166);
+    text-decoration-thickness: 4px;
+}
+
+.arrowup{
+    bottom: 40px;
+    z-index: 100;
+    position: fixed;
+    margin-left: 1253px;
+    width: 50px;
+    cursor: pointer;
+}
