@@ -1,0 +1,145 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Oswald', sans-serif;
+}
+.background{
+    width: 100%;
+    height: 111vh;
+    background-image: linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.3)),url(images/background.png);
+    background-position: center;
+    background-size: cover;
+}
+
+.underline ul li a{
+    font-size: 27px;
+    text-decoration: none;
+    color: rgb(35, 32, 44);
+    text-transform: uppercase;
+    display: inline-block;
+    position: relative;
+    padding-top: 15px;
+}
+
+.underline ul li a::after{
+    content:'';
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+    left: 0;
+    height: 4px;
+    transform: scaleX(0);
+    background-color: rgb(255, 209, 166);
+    background-origin: bottom ;
+    transition: 0.25s ease-out;
+
+}
+.underline ul li a:hover:after{
+    transform: scaleX(1);
+    transform-origin: bottom ;
+
+}
+
+.logo{
+    width: 160px;
+    cursor: pointer;
+}
+.text{
+    text-align: center;
+    top: -50%;
+    left: -50%;
+}
+.text h5{
+    font-size: 50px;
+    color: #fff;
+}
+.text p{
+    color: #fff;
+    font-size: 20px;
+}
+.gif{
+    margin: 30px;
+    border-radius: 25px;
+  background: url(images/doctor.gif);
+  background-position: left top;
+  padding: 0px;
+  width: 1000px;
+
+}
+.undergiftext{
+    padding: 0px;
+    font-size: 60px;
+    text-align: center;
+    color: #fff;
+    margin-top: -23px;
+}
+.navbar{
+    border-bottom: 1px solid black;
+}
+.nav_toggle{
+    position: absolute;
+    cursor: pointer;
+    margin: 0rem 1rem;
+    right: 0;
+}
+svg{
+    width: 1.5rem;
+    fill: black;
+}
+.close{
+    display: none;
+}
+.menu{
+    margin: 0.2rem;
+    float: right;
+}
+.nav_menu{
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    align-items: center;
+    margin: 1rem;
+}
+:first-child{
+    margin-right: auto;
+    display: block;
+}
+a{
+    text-decoration: none;
+    color: inherit;
+    font-size: 1.2rem;
+}
+.nav_checkbox{
+    display: none;
+}
+li{
+    list-style: none;
+    display: none;
+}
+#nav_checkbox:checked ~ .underline li{
+    display: block;
+    margin: 10px;
+    margin-left: 300px;
+}
+#nav_checkbox:checked ~ label.nav_toggle .close{
+    display: block;
+}
+#nav_checkbox:checked ~ label.nav_toggle .menu{
+    display: none;
+}
+
+
+
+
+
+@media only screen and (min-width:1000px) {
+        .nav_toggle{
+            display: none;
+        }
+        .nav_menu{
+            flex-direction: row;
+        }
+        li{
+            display: block;
+        }
+}
